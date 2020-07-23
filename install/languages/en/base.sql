@@ -1057,9 +1057,9 @@ CREATE TABLE `{#}menu_items` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Menu items';
 
 INSERT INTO `{#}menu_items` (`id`, `menu_id`, `parent_id`, `title`, `url`, `ordering`, `options`, `groups_view`, `groups_hide`) VALUES
-(13, 2, 0, 'My profile', 'users/{user.id}', 1, '---\ntarget: _self\nclass: profile', '---\n- 0\n', NULL),
+(13, 2, 0, 'My profile', 'users/{user.id}', 1, '---\ntarget: _self\nclass: profile', '---\n- 0\n', '---\n- 1\n'),
 (14, 2, 0, 'My messages', '{messages:view}', 2, '---\ntarget: _self\nclass: messages messages-counter ajax-modal', '---\n- 0\n', NULL),
-(24, 2, 0, 'Add', '{content:add}', 6, '---\ntarget: _self\nclass: add', '---\n- 0\n', NULL),
+(24, 2, 0, 'Add', '{content:add}', 6, '---\ntarget: _self\nclass: add', '---\n- 0\n', '---\n- 1\n'),
 (25, 2, 0, 'Control panel', '{admin:menu}', 7, '---\ntarget: _self\nclass: cpanel', '---\n- 6\n', NULL),
 (29, 1, 0, 'Users', 'users', 8, '---\ntarget: _self\nclass:', '---\n- 0\n', NULL),
 (30, 6, 0, 'Notifications', '{messages:notices}', 1, '---\ntarget: _self\nclass: bell ajax-modal notices-counter\n', '---\n- 0\n', '---\n- 1\n'),
@@ -1072,7 +1072,7 @@ INSERT INTO `{#}menu_items` (`id`, `menu_id`, `parent_id`, `title`, `url`, `orde
 (37, 2, 0, 'Moderation', '{moderation:panel}', 4, '---\ntarget: _self\nclass: checklist', '---\n- 5\n- 6\n', NULL),
 (41, 2, 0, 'On moderation', '{moderation:user_panel}', 4, '---\ntarget: _self\nclass: onchecklist\n', '---\n- 0\n', NULL),
 (38, 1, 0, 'Comments', 'comments', 7, '---\ntarget: _self\nclass:', '---\n- 0\n', NULL),
-(43, 2, 0, 'Log out', 'auth/logout', 12, '---\ntarget: _self\nclass: logout', '---\n- 0\n', NULL);
+(43, 2, 0, 'Log out', 'auth/logout', 12, '---\ntarget: _self\nclass: logout', '---\n- 0\n', '---\n- 1\n');
 
 DROP TABLE IF EXISTS `{#}moderators`;
 CREATE TABLE `{#}moderators` (

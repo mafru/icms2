@@ -1057,8 +1057,8 @@ CREATE TABLE `{#}menu_items` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Пункты меню';
 
 INSERT INTO `{#}menu_items` (`id`, `menu_id`, `parent_id`, `title`, `url`, `ordering`, `options`, `groups_view`, `groups_hide`) VALUES
-(13, 2, 0, 'Мой профиль', 'users/{user.id}', 1, '---\ntarget: _self\nclass: profile', '---\n- 0\n', NULL),
-(14, 2, 0, 'Мои сообщения', '{messages:view}', 2, '---\nclass: messages messages-counter ajax-modal\n', '---\n- 0\n', NULL),
+(13, 2, 0, 'Мой профиль', 'users/{user.id}', 1, '---\ntarget: _self\nclass: profile', '---\n- 0\n', '---\n- 1\n'),
+(14, 2, 0, 'Мои сообщения', '{messages:view}', 2, '---\nclass: messages messages-counter ajax-modal\n', '---\n- 0\n', '---\n- 1\n'),
 (24, 2, 0, 'Создать', '{content:add}', 6, '---\nclass: add\n', NULL, NULL),
 (25, 2, 0, 'Панель управления', '{admin:menu}', 7, '---\nclass: cpanel\n', '---\n- 6\n', NULL),
 (29, 1, 0, 'Люди', 'users', 9, '---\nclass: \n', '---\n- 0\n', NULL),
@@ -1072,7 +1072,7 @@ INSERT INTO `{#}menu_items` (`id`, `menu_id`, `parent_id`, `title`, `url`, `orde
 (37, 2, 0, 'Модерация', '{moderation:panel}', 4, '---\nclass: checklist', '---\n- 5\n- 6\n', NULL),
 (41, 2, 0, 'На модерации', '{moderation:user_panel}', 4, '---\ntarget: _self\nclass: onchecklist\n', '---\n- 0\n', NULL),
 (38, 1, 0, 'Комментарии', 'comments', 8, '---\nclass:', '---\n- 0\n', NULL),
-(43, 2, 0, 'Выйти', 'auth/logout', 12, '---\ntarget: _self\nclass: logout', '---\n- 0\n', NULL);
+(43, 2, 0, 'Выйти', 'auth/logout', 12, '---\ntarget: _self\nclass: logout', '---\n- 0\n', '---\n- 1\n');
 
 DROP TABLE IF EXISTS `{#}moderators`;
 CREATE TABLE `{#}moderators` (
